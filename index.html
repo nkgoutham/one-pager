@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripture Travel Investor Pre-Read</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .chart-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .highlight {
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tripture Travel: Investor Pre-Read</h1>
+
+        <div class="section">
+            <h2>1. Current Status</h2>
+            <p>Tripture Travel is a bootstrapped company that has successfully established itself in the luxury homestay market. With 6 homestays across Chikmagalur, Coorg, Krishnagiri, and Udupi, we've demonstrated strong organic growth. We're now positioned to scale significantly, leveraging our experience and market presence to expand our footprint and service offerings.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Financials to Date</h2>
+            <div class="chart-container">
+                <canvas id="revenueExpenseChart"></canvas>
+            </div>
+            <p><strong>Note:</strong> Revenue figures are conservative estimates based on available data. Expense projections assume a steady 5% year-on-year increase, with 2024 being the most accurate to date.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. Goals for the Upcoming Year</h2>
+            <ul>
+                <li>Expand our property portfolio to <span class="highlight">100+ homestays</span> by the end of 2025</li>
+                <li>Pivot to a "homestay as a service" brand model</li>
+                <li>Onboard premium homestays to enhance our luxury offerings</li>
+                <li>Maximize returns on our Coorg property through resort development and investor partnerships</li>
+                <li>Streamline and optimize existing homestay operations</li>
+                <li>Implement a multi-tiered marketing strategy to boost bookings and brand awareness</li>
+                <li>Enhance customer retention through loyalty programs and personalized experiences</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Key Challenges</h2>
+            <ul>
+                <li>Scaling operations while maintaining quality and personalized experiences</li>
+                <li>Implementing effective systems for data management and reporting</li>
+                <li>Balancing seasonal demand fluctuations</li>
+                <li>Differentiating our brand in a competitive market</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Potential Big Ticket Opportunities (Ongoing)</h2>
+            <ul>
+                <li><strong>Living Walls Chikmagalur:</strong> Potential takeover of hospitality operations, with current scale of operations at <span class="highlight">₹10-20 lakhs monthly revenue</span></li>
+                <li><strong>Coorg Property Development:</strong> Property acquired, currently onboarding architects for construction plans. Post-sale potential profits of <span class="highlight">₹10-20 lakhs per unit</span></li>
+                <li><strong>Hospitality as a Service:</strong> Expanding our brand to manage 100 homestays and small resorts, pivoting to a service-oriented model in the luxury hospitality sector</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('revenueExpenseChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['2021', '2022', '2023', '2024 (Projected)'],
+                datasets: [{
+                    label: 'Estimated Revenue (₹ Lakhs)',
+                    data: [26.62, 32.33, 47.70, 55.17],
+                    backgroundColor: 'rgba(52, 152, 219, 0.6)',
+                    borderColor: 'rgba(52, 152, 219, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Estimated Expenses (₹ Lakhs)',
+                    data: [33.00, 34.65, 36.38, 54.00],
+                    backgroundColor: 'rgba(231, 76, 60, 0.6)',
+                    borderColor: 'rgba(231, 76, 60, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Amount (₹ Lakhs)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Tripture Travel: Estimated Revenue vs Expenses'
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
