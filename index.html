@@ -128,16 +128,16 @@
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['2021', '2022', '2023', '2024 (Proj)'],
+                labels: ['2021', '2022', '2023', '2024 (YTD)'],
                 datasets: [{
-                    label: 'Est. Revenue (₹ Lakhs)',
-                    data: [26.62, 32.33, 47.70, 55.17],
+                    label: 'Revenue (₹ Lakhs)',
+                    data: [26.62, 32.33, 80.04, 32.09],
                     backgroundColor: 'rgba(52, 152, 219, 0.6)',
                     borderColor: 'rgba(52, 152, 219, 1)',
                     borderWidth: 1
                 }, {
-                    label: 'Est. Expenses (₹ Lakhs)',
-                    data: [33.00, 34.65, 36.38, 54.00],
+                    label: 'Expenses (₹ Lakhs)',
+                    data: [33.00, 34.65, 26.38, 10.37],
                     backgroundColor: 'rgba(231, 76, 60, 0.6)',
                     borderColor: 'rgba(231, 76, 60, 1)',
                     borderWidth: 1
@@ -158,7 +158,7 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Estimated Revenue vs Expenses',
+                        text: 'Revenue vs Expenses',
                         font: {
                             size: 16
                         }
